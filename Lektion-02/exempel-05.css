@@ -1,0 +1,32 @@
+body{
+    color:#8d21a3;
+}
+
+a{
+    color:white;
+    background-color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:white;
+    background-color: black;
+}
+
+/* CSS-Klasser */
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+/* ID-Regel */
+#header{
+    border-bottom: #8d21a3 5px solid;
+}
+
+/* Universal selektor */
+*{
+    margin: 0;
+}
