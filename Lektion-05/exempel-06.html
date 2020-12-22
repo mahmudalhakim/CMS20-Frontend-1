@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Exempel 6</title>
+
+    <style>
+        p{
+            display: none;
+        }
+        div{
+            width:80px;
+            height:80px;
+            display:none;
+            background-color:red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>jQuery - Exempel 6</h1>
+
+    <h2>Effekter</h2>
+
+    <button id="btnShow">Visa</button>
+    <button id="btnHide">Dölj</button>
+
+    <hr>
+    
+    <button id="btnToggleDemo">Visa</button>
+    
+    <hr>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque architecto quod culpa alias molestias nulla doloremque odit asperiores expedita sunt quis facilis id animi quos dolorum, natus totam distinctio fugit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque architecto quod culpa alias molestias nulla doloremque odit asperiores expedita sunt quis facilis id animi quos dolorum, natus totam distinctio fugit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque architecto quod culpa alias molestias nulla doloremque odit asperiores expedita sunt quis facilis id animi quos dolorum, natus totam distinctio fugit.</p>
+
+    <hr>
+
+    <div id="fadeDemo1"></div>
+    <div id="fadeDemo2"></div>
+    <div id="fadeDemo3"></div>
+
+    <hr>
+
+    <button id="btnFadeDemo">Fading demo</button>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            
+            // jQuery Effects
+            $('#btnHide').click(function(){
+                $('p').hide(1000);  // 1 sekund
+            });
+            $('#btnShow').click(function(){
+                $('p').show(1000);
+            });
+
+            $('#btnToggleDemo').click(function(){
+                $('p').toggle(1000);
+                $(this).text(function(i,text){
+                    /*
+                    console.log(text);
+                    if(text == 'Visa')
+                        return 'Dölj'
+                    else
+                        return 'Visa'
+                    */
+                    return text == 'Visa' ? 'Dölj' : 'Visa'
+
+                    // Tips
+                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+                });
+
+            });
+
+            $('#btnFadeDemo').click(function(){
+                $('#div1').fadeTo('slow', 0.1);
+                $('#div2').fadeTo('slow', 0.5);
+                $('#div3').fadeTo('slow', 0.9);
+            })
+
+
+        })
+
+    </script>
+
+</body>
+</html>

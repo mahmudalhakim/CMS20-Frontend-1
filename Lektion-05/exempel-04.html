@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Exempel 4</title>
+</head>
+<body>
+    <h1>jQuery - Exempel 4</h1>
+    <h2>DOM Manipulation</h2>
+
+    <div id="demo"></div>
+
+    <hr>
+
+    <input type="text" id="input" value="Lite text">
+
+    <div class="div">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur quia repellendus hic molestiae, impedit minus placeat incidunt quas quisquam in quis harum nulla vel, suscipit, distinctio eum cum necessitatibus a.</div>
+    <div class="div">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur quia repellendus hic molestiae, impedit minus placeat incidunt quas quisquam in quis harum nulla vel, suscipit, distinctio eum cum necessitatibus a.</div>
+    <div class="div">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur quia repellendus hic molestiae, impedit minus placeat incidunt quas quisquam in quis harum nulla vel, suscipit, distinctio eum cum necessitatibus a.</div>
+    
+    <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, delectus nisi corporis assumenda veritatis, explicabo omnis itaque fuga, voluptates nemo quia et adipisci. Repellat, tenetur nisi eius ipsam atque quam.</p>
+    <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, delectus nisi corporis assumenda veritatis, explicabo omnis itaque fuga, voluptates nemo quia et adipisci. Repellat, tenetur nisi eius ipsam atque quam.</p>
+    <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, delectus nisi corporis assumenda veritatis, explicabo omnis itaque fuga, voluptates nemo quia et adipisci. Repellat, tenetur nisi eius ipsam atque quam.</p>
+    
+    <hr>
+
+    <ul>
+        <li>item</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            
+            // DOM Manipluation
+            // Lägg till innehåll
+            $('#demo').html('<h3>Lite text via jQuery</h3>');
+
+            // Hämta text från ett input-fält 
+            let value = $('#input').val();
+            console.log(value);
+
+            // Ta bort element från DOM-Trädet
+            $('.div').remove();
+
+            // Dölj element med CSS (display:none)
+            $('.p').hide();
+
+            // Infoga element 
+            $('ul').before('<p>Före listan</p>');
+            $('ul').after('<p>Efter listan</p>');
+            $('ul').prepend('<li>Start</li>');
+            $('ul').append('<li>End</li>');   
+
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Exempel 3</title>
+</head>
+<body>
+    <h1>jQuery - Exempel 3</h1>
+    
+    <h2>Selektorer (väljare)</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam quisquam quis incidunt quia unde, reprehenderit voluptates tempore officiis quasi, vero obcaecati repellat magnam vitae officia dignissimos ullam distinctio nisi?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam quisquam quis incidunt quia unde, reprehenderit voluptates tempore officiis quasi, vero obcaecati repellat magnam vitae officia dignissimos ullam distinctio nisi?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam quisquam quis incidunt quia unde, reprehenderit voluptates tempore officiis quasi, vero obcaecati repellat magnam vitae officia dignissimos ullam distinctio nisi?</p>
+    
+    <div id="demo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laboriosam debitis delectus libero sapiente esse in possimus molestiae, quae ab aspernatur quis quidem odit expedita incidunt ea illum dolorem ex?
+    </div>
+
+    <h3 class="demo">Rubrik 3</h3>
+    <h3 class="demo">Rubrik 3</h3>
+    <h3 class="demo">Rubrik 3</h3>
+
+    <button>1 Klicka här för att ta bort mig</button>
+    <br>
+    <button>2 Klicka här för att ta bort mig</button>
+    <br>
+    <button>3 Klicka här för att ta bort mig</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            
+            console.log('Hello jQuery');
+
+            // Typ-selektor 
+            $('p').hide();
+
+            // ID-selektor
+            $('#demo').hide();
+
+            // Klass-selektor
+            $('.demo').hide();
+
+            // This-selektor
+            $('button').click(function(){
+                $(this).hide();
+            })
+        })
+
+    </script>
+
+</body>
+</html>

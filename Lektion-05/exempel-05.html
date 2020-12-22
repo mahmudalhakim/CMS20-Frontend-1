@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Exempel 5</title>
+</head>
+<body>
+    <h1>jQuery - Exempel 5</h1>
+
+    <h2>Events</h2>
+
+    <button id="btn1">Klicka här för att dölja mig</button>
+
+    <hr>
+
+    <h2 id="mouseDemo1">Demo på Mouseenter & Mouseout</h2>
+
+    <h2 id="mouseDemo2">Demo på Mousedown & Mouseup</h2>
+
+    <hr>
+
+    <h3>Formulär</h3>
+    <p>
+        Namn <br>
+        <input type="text"> 
+        <br><br>
+
+        E-post <br>
+        <input type="email">
+
+        <br><br>
+        <input type="submit" value="Logga in">
+    </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            
+            // jQuery Events
+
+            $('#btn1').click(function(){
+                $(this).remove();
+            });
+
+            $('#mouseDemo1').mouseenter(function(){
+                $(this).html("Detta är en mouseenter-event");
+            });
+
+            $('#mouseDemo1').mouseout(function(){
+                $(this).html("Detta är en mouseout-event");
+            });
+
+
+            $('#mouseDemo2').mousedown(function(){
+                $(this).html("Detta är en mousedown-event");
+            });
+
+            $('#mouseDemo2').mouseup(function(){
+                $(this).html("Detta är en mouseup-event");
+            });
+            
+            $('input').focus(function(){
+                $(this).css('background-color', 'gold');
+            });
+
+            $('input').blur(function(){
+                $(this).css('background-color', '#FFFFFF');
+            });
+
+        })
+
+    </script>
+
+</body>
+</html>
