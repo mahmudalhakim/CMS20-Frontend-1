@@ -1,0 +1,65 @@
+@width: 960px;
+@color: rgb(128,128,128);
+
+.container{
+    width: @width;
+    font-family: Verdana, serif;
+    margin:auto;
+    padding:10px;
+    background-color: white;
+    height: 100vh;
+}
+
+body{
+    font-size: 1.2em;
+    background-color: @color*1.8;
+}
+
+
+/* 
+Exempel på Mixins
+*/
+.bordered(){
+    border:1px solid black;
+    padding:10px;
+}
+.post{
+    .bordered();
+    background-color:#ffff00;
+}
+.circle(@size: 100px){
+    background-color: yellowgreen;
+    border-radius: 100%;
+    width: @size;
+    height: @size;
+}
+.small-circle{
+    .circle();
+}
+.big-circle{
+    .circle(200px);
+}
+
+/*
+    Nesting
+*/
+#header{
+
+    color:#d48693;
+
+    .navigation{
+        font-size: 2em;
+
+        a{
+            text-decoration: none;
+            color:maroon;
+
+            &:hover{
+                color:hotpink;
+            }
+        }
+
+    }
+    
+}
+

@@ -1,0 +1,48 @@
+.container {
+  width: 960px;
+  font-family: Verdana, serif;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  height: 100vh;
+}
+body {
+  font-size: 1.2em;
+  background-color: #e6e6e6;
+}
+/* 
+Exempel på Mixins
+*/
+.post {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #ffff00;
+}
+.small-circle {
+  background-color: yellowgreen;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+.big-circle {
+  background-color: yellowgreen;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+}
+/*
+    Nesting
+*/
+#header {
+  color: #d48693;
+}
+#header .navigation {
+  font-size: 2em;
+}
+#header .navigation a {
+  text-decoration: none;
+  color: maroon;
+}
+#header .navigation a:hover {
+  color: hotpink;
+}
