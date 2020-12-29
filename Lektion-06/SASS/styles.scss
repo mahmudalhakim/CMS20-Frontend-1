@@ -1,0 +1,28 @@
+@import 'reset';
+
+
+// Variabler i SASS
+$font-stack: Helvetica , sans-serif;
+$primary-color: #333;
+
+body{
+    font-family: $font-stack;
+    color: $primary-color;
+}
+
+nav{
+    text-align: center;
+    a{
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        color:maroon;
+
+        font: {
+            family: Verdana, sans-serif;
+            size:2em;
+            weight:bold;
+        }
+    }
+
+}
